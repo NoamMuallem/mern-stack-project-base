@@ -1,0 +1,38 @@
+{
+  "name": "mern-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test1": "jest recipe.test.js",
+    "test2": "jest user.test.js",
+    "client-install": "cd client && npm install",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "keywords": [],
+  "dependencies": {
+    "babel-jest": "^24.9.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.9",
+    "mongoosastic": "^4.0.2",
+    "mongoose": "^5.9.20",
+    "morgan": "^1.10.0",
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {
+    "concurrently": "5.2.0",
+    "jest": "^26.1.0",
+    "nodemon": "^1.17.5",
+    "supertest": "^4.0.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
